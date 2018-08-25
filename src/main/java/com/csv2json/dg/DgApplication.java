@@ -17,6 +17,6 @@ public class DgApplication {
         System.out.println("Reading data from csv and converting it to java object:");
         ReadCsv csvToJavaObject = new ReadCsv();
         csvToJavaObject.readCsv();
-//        SpringApplication.run(DgApplication.class, args);
+        SpringApplication.run(DgApplication.class, args);
 	}
 }

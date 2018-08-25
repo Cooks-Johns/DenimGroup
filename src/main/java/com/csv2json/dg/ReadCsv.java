@@ -51,6 +51,8 @@ public class ReadCsv {
                 csvObject.setApplicationTags(csv[21]);
                 csvObject.setVulnerabilityTags(csv[22]);
 
+                csvList.add(cs)
+
                 System.out.println("DgCsvData [ Team Name= " + csv[0]
                         + ",app Unique ID= " + csv[1]
                         + "  Application Name= " + csv[2]
