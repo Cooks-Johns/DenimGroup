@@ -3,15 +3,15 @@ package com.csv2json.dg;
 public class CsvData {
 
     private String teamName;
-    private int appId;
+    private String appId;
     private String appName;
-    private int vulnerabilityId;
+    private String vulnerabilityId;
     private String vulnerabilityReference;
     private String severity;
-    private boolean status;
-    private int openDate;
+    private String status;
+    private String openDate;
     private String scanner;
-    private int cweId;
+    private String cweId;
     private String cweName;
     private String owaspTopTen;
     private String path;
@@ -24,19 +24,20 @@ public class CsvData {
     private String scannerDetails;
     private String scannerRecommendation;
     private String remediationTargetDate;
+    private String applicationTags;
     private String vulnerabilityTags;
 
 
     public CsvData(String teamName,
-                   int appId,
+                   String appId,
                    String appName,
-                   int vulnerabilityId,
+                   String vulnerabilityId,
                    String vulnerabilityReference,
                    String severity,
-                   boolean status,
-                   int openDate,
+                   String status,
+                   String openDate,
                    String scanner,
-                   int cweId,
+                   String cweId,
                    String cweName,
                    String owaspTopTen,
                    String path,
@@ -49,12 +50,12 @@ public class CsvData {
                    String scannerDetails,
                    String scannerRecommendation,
                    String remediationTargetDate,
+                   String applicationTags,
                    String vulnerabilityTags) {
         this.teamName = teamName;
         this.appId = appId;
         this.appName = appName;
         this.vulnerabilityId = vulnerabilityId;
-        this.vulnerabilityTags = vulnerabilityTags;
         this.vulnerabilityReference = vulnerabilityReference;
         this.severity = severity;
         this.status = status;
@@ -73,6 +74,12 @@ public class CsvData {
         this.scannerDetails = scannerDetails;
         this.scannerRecommendation = scannerRecommendation;
         this.remediationTargetDate = remediationTargetDate;
+        this.applicationTags = applicationTags;
+        this.vulnerabilityTags = vulnerabilityTags;
+    }
+
+    public CsvData() {
+
     }
 
 
@@ -100,11 +107,11 @@ public class CsvData {
         this.teamName = teamName;
     }
 
-    public int getAppId() {
+    public String getAppId() {
         return appId;
     }
 
-    public void setAppId(int appId) {
+    public void setAppId(String appId) {
         this.appId = appId;
     }
 
@@ -116,11 +123,11 @@ public class CsvData {
         this.appName = appName;
     }
 
-    public int getVulnerabilityId() {
+    public String getVulnerabilityId() {
         return vulnerabilityId;
     }
 
-    public void setVulnerabilityId(int vulnerabilityId) {
+    public void setVulnerabilityId(String vulnerabilityId) {
         this.vulnerabilityId = vulnerabilityId;
     }
 
@@ -140,19 +147,19 @@ public class CsvData {
         this.severity = severity;
     }
 
-    public boolean isStatus() {
+    public String isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public int getOpenDate() {
+    public String getOpenDate() {
         return openDate;
     }
 
-    public void setOpenDate(int openDate) {
+    public void setOpenDate(String openDate) {
         this.openDate = openDate;
     }
 
@@ -164,11 +171,11 @@ public class CsvData {
         this.scanner = scanner;
     }
 
-    public int getCweId() {
+    public String getCweId() {
         return cweId;
     }
 
-    public void setCweId(int cweId) {
+    public void setCweId(String cweId) {
         this.cweId = cweId;
     }
 
@@ -258,5 +265,13 @@ public class CsvData {
 
     public void setVulnerabilityTags(String vulnerabilityTags) {
         this.vulnerabilityTags = vulnerabilityTags;
+    }
+
+    public String getApplicationTags() {
+        return applicationTags;
+    }
+
+    public void setApplicationTags(String applicationTags) {
+        this.applicationTags = applicationTags;
     }
 }
