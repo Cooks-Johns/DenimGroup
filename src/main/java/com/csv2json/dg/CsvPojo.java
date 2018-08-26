@@ -1,6 +1,6 @@
 package com.csv2json.dg;
 
-public class CsvData {
+public class CsvPojo {
 
     private String teamName;
     private String appId;
@@ -28,59 +28,57 @@ public class CsvData {
     private String vulnerabilityTags;
 
 
-    public CsvData(String teamName,
-                   String appId,
-                   String appName,
-                   String vulnerabilityId,
-                   String vulnerabilityReference,
-                   String severity,
-                   String status,
-                   String openDate,
-                   String scanner,
-                   String cweId,
-                   String cweName,
-                   String owaspTopTen,
-                   String path,
-                   String parameter,
-                   String payload,
-                   String attackSurfacePath,
-                   String attackString,
-                   String attackRequest,
-                   String attackResponse,
-                   String scannerDetails,
-                   String scannerRecommendation,
-                   String remediationTargetDate,
-                   String applicationTags,
-                   String vulnerabilityTags) {
-        this.teamName = teamName;
-        this.appId = appId;
-        this.appName = appName;
-        this.vulnerabilityId = vulnerabilityId;
-        this.vulnerabilityReference = vulnerabilityReference;
-        this.severity = severity;
-        this.status = status;
-        this.openDate = openDate;
-        this.scanner = scanner;
-        this.cweId = cweId;
-        this.cweName = cweName;
-        this.owaspTopTen = owaspTopTen;
-        this.path = path;
-        this.parameter = parameter;
-        this.payload = payload;
-        this.attackSurfacePath = attackSurfacePath;
-        this.attackString = attackString;
-        this.attackRequest = attackRequest;
-        this.attackResponse = attackResponse;
-        this.scannerDetails = scannerDetails;
-        this.scannerRecommendation = scannerRecommendation;
-        this.remediationTargetDate = remediationTargetDate;
-        this.applicationTags = applicationTags;
-        this.vulnerabilityTags = vulnerabilityTags;
-    }
+//    public CsvPojo(String teamName,
+//                   String appId,
+//                   String appName,
+//                   String vulnerabilityId,
+//                   String vulnerabilityReference,
+//                   String severity,
+//                   String status,
+//                   String openDate,
+//                   String scanner,
+//                   String cweId,
+//                   String cweName,
+//                   String owaspTopTen,
+//                   String path,
+//                   String parameter,
+//                   String payload,
+//                   String attackSurfacePath,
+//                   String attackString,
+//                   String attackRequest,
+//                   String attackResponse,
+//                   String scannerDetails,
+//                   String scannerRecommendation,
+//                   String remediationTargetDate,
+//                   String applicationTags,
+//                   String vulnerabilityTags) {
+//        this.teamName = teamName;
+//        this.appId = appId;
+//        this.appName = appName;
+//        this.vulnerabilityId = vulnerabilityId;
+//        this.vulnerabilityReference = vulnerabilityReference;
+//        this.severity = severity;
+//        this.status = status;
+//        this.openDate = openDate;
+//        this.scanner = scanner;
+//        this.cweId = cweId;
+//        this.cweName = cweName;
+//        this.owaspTopTen = owaspTopTen;
+//        this.path = path;
+//        this.parameter = parameter;
+//        this.payload = payload;
+//        this.attackSurfacePath = attackSurfacePath;
+//        this.attackString = attackString;
+//        this.attackRequest = attackRequest;
+//        this.attackResponse = attackResponse;
+//        this.scannerDetails = scannerDetails;
+//        this.scannerRecommendation = scannerRecommendation;
+//        this.remediationTargetDate = remediationTargetDate;
+//        this.applicationTags = applicationTags;
+//        this.vulnerabilityTags = vulnerabilityTags;
+//    }
 
-    public CsvData() {
 
-    }
 
 
     public String getOwaspTopTen() {

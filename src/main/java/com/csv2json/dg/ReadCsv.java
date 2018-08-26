@@ -15,7 +15,9 @@ public class ReadCsv {
         BufferedReader reading = null;
         String line = "";
         String splitBy = ",";
-        List<CsvData> csvList = new ArrayList<CsvData>();
+
+
+//        List<CsvPojo> csvList = new ArrayList<CsvPojo>();
 
         try {
             reading = new BufferedReader(new FileReader(csvFileToRead));
@@ -25,31 +27,31 @@ public class ReadCsv {
                 // splits on the comma
                 String[] csv = line.split(splitBy);
 
-                // this is where the car values are stored
-                CsvData csvObject = new CsvData();
-                csvObject.setTeamName(csv[0]);
-                csvObject.setAppId(csv[1]);
-                csvObject.setAppName(csv[2]);
-                csvObject.setVulnerabilityId(csv[3]);
-                csvObject.setVulnerabilityReference(csv[4]);
-                csvObject.setSeverity(csv[5]);
-                csvObject.setStatus(csv[6]);
-                csvObject.setOpenDate(csv[7]);
-                csvObject.setScanner(csv[8]);
-                csvObject.setCweId(csv[9]);
-                csvObject.setOwaspTopTen(csv[10]);
-                csvObject.setPath(csv[11]);
-                csvObject.setParameter(csv[12]);
-                csvObject.setPayload(csv[13]);
-                csvObject.setAttackSurfacePath(csv[14]);
-                csvObject.setAttackString(csv[15]);
-                csvObject.setAttackRequest(csv[16]);
-                csvObject.setAttackResponse(csv[17]);
-                csvObject.setScannerDetails(csv[18]);
-                csvObject.setScannerRecommendation(csv[19]);
-                csvObject.setRemediationTargetDate(csv[20]);
-                csvObject.setApplicationTags(csv[21]);
-                csvObject.setVulnerabilityTags(csv[22]);
+//                // this is where the car values are stored
+//                CsvPojo csvObject = new CsvPojo();
+//                csvObject.setTeamName(csv[0]);
+//                csvObject.setAppId(csv[1]);
+//                csvObject.setAppName(csv[2]);
+//                csvObject.setVulnerabilityId(csv[3]);
+//                csvObject.setVulnerabilityReference(csv[4]);
+//                csvObject.setSeverity(csv[5]);
+//                csvObject.setStatus(csv[6]);
+//                csvObject.setOpenDate(csv[7]);
+//                csvObject.setScanner(csv[8]);
+//                csvObject.setCweId(csv[9]);
+//                csvObject.setOwaspTopTen(csv[10]);
+//                csvObject.setPath(csv[11]);
+//                csvObject.setParameter(csv[12]);
+//                csvObject.setPayload(csv[13]);
+//                csvObject.setAttackSurfacePath(csv[14]);
+//                csvObject.setAttackString(csv[15]);
+//                csvObject.setAttackRequest(csv[16]);
+//                csvObject.setAttackResponse(csv[17]);
+//                csvObject.setScannerDetails(csv[18]);
+//                csvObject.setScannerRecommendation(csv[19]);
+//                csvObject.setRemediationTargetDate(csv[20]);
+//                csvObject.setApplicationTags(csv[21]);
+//                csvObject.setVulnerabilityTags(csv[22]);
 
                 System.out.println("DgCsvData [ Team Name= " + csv[0]
                         + ",app Unique ID= " + csv[1]
@@ -75,8 +77,7 @@ public class ReadCsv {
                         + " ,Scanner Recommendation= " + csv[21]
                         + " ,Remediation Target Date= " + csv[22]
                         + " ,Application Tags= " + csv[23]
-                        + " ,Vulnerability Tags=" + csv[24]
-                );
+                        + " ,Vulnerability Tags=" + csv[24]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();;
@@ -92,10 +93,6 @@ public class ReadCsv {
             }
         }
         System.out.println("This program has finished reading your CSV file.");
-    }
-
-    public static void main(String[] args) {
-        System.out.println();
     }
 
 }
