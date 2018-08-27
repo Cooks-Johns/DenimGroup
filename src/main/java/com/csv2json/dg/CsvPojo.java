@@ -1,11 +1,14 @@
 package com.csv2json.dg;
 
+import csv.CSV;
+
 public class CsvPojo {
 
     private String teamName;
     private String appId;
     private String appName;
     private String vulnerabilityId;
+    private String vulnerabilityName;
     private String vulnerabilityReference;
     private String severity;
     private String status;
@@ -28,55 +31,57 @@ public class CsvPojo {
     private String vulnerabilityTags;
 
 
-//    public CsvPojo(String teamName,
-//                   String appId,
-//                   String appName,
-//                   String vulnerabilityId,
-//                   String vulnerabilityReference,
-//                   String severity,
-//                   String status,
-//                   String openDate,
-//                   String scanner,
-//                   String cweId,
-//                   String cweName,
-//                   String owaspTopTen,
-//                   String path,
-//                   String parameter,
-//                   String payload,
-//                   String attackSurfacePath,
-//                   String attackString,
-//                   String attackRequest,
-//                   String attackResponse,
-//                   String scannerDetails,
-//                   String scannerRecommendation,
-//                   String remediationTargetDate,
-//                   String applicationTags,
-//                   String vulnerabilityTags) {
-//        this.teamName = teamName;
-//        this.appId = appId;
-//        this.appName = appName;
-//        this.vulnerabilityId = vulnerabilityId;
-//        this.vulnerabilityReference = vulnerabilityReference;
-//        this.severity = severity;
-//        this.status = status;
-//        this.openDate = openDate;
-//        this.scanner = scanner;
-//        this.cweId = cweId;
-//        this.cweName = cweName;
-//        this.owaspTopTen = owaspTopTen;
-//        this.path = path;
-//        this.parameter = parameter;
-//        this.payload = payload;
-//        this.attackSurfacePath = attackSurfacePath;
-//        this.attackString = attackString;
-//        this.attackRequest = attackRequest;
-//        this.attackResponse = attackResponse;
-//        this.scannerDetails = scannerDetails;
-//        this.scannerRecommendation = scannerRecommendation;
-//        this.remediationTargetDate = remediationTargetDate;
-//        this.applicationTags = applicationTags;
-//        this.vulnerabilityTags = vulnerabilityTags;
-//    }
+    public CsvPojo(String teamName,
+                   String appId,
+                   String appName,
+                   String vulnerabilityId,
+                   String vulnerabilityName,
+                   String vulnerabilityReference,
+                   String severity,
+                   String status,
+                   String openDate,
+                   String scanner,
+                   String cweId,
+                   String cweName,
+                   String owaspTopTen,
+                   String path,
+                   String parameter,
+                   String payload,
+                   String attackSurfacePath,
+                   String attackString,
+                   String attackRequest,
+                   String attackResponse,
+                   String scannerDetails,
+                   String scannerRecommendation,
+                   String remediationTargetDate,
+                   String applicationTags,
+                   String vulnerabilityTags) {
+        this.teamName = teamName;
+        this.appId = appId;
+        this.appName = appName;
+        this.vulnerabilityId = vulnerabilityId;
+        this.vulnerabilityName = vulnerabilityName;
+        this.vulnerabilityReference = vulnerabilityReference;
+        this.severity = severity;
+        this.status = status;
+        this.openDate = openDate;
+        this.scanner = scanner;
+        this.cweId = cweId;
+        this.cweName = cweName;
+        this.owaspTopTen = owaspTopTen;
+        this.path = path;
+        this.parameter = parameter;
+        this.payload = payload;
+        this.attackSurfacePath = attackSurfacePath;
+        this.attackString = attackString;
+        this.attackRequest = attackRequest;
+        this.attackResponse = attackResponse;
+        this.scannerDetails = scannerDetails;
+        this.scannerRecommendation = scannerRecommendation;
+        this.remediationTargetDate = remediationTargetDate;
+        this.applicationTags = applicationTags;
+        this.vulnerabilityTags = vulnerabilityTags;
+    }
 
 
 
@@ -261,6 +266,15 @@ public class CsvPojo {
         return vulnerabilityTags;
     }
 
+
+    public String getVulnerabilityName() {
+        return vulnerabilityName;
+    }
+
+    public void setVulnerabilityName(String vulnerabilityName) {
+        this.vulnerabilityName = vulnerabilityName;
+    }
+
     public void setVulnerabilityTags(String vulnerabilityTags) {
         this.vulnerabilityTags = vulnerabilityTags;
     }
@@ -271,5 +285,35 @@ public class CsvPojo {
 
     public void setApplicationTags(String applicationTags) {
         this.applicationTags = applicationTags;
+    }
+
+
+    @Override
+    public String toString() {
+        return "DgCsvData [ Team Name= " + teamName
+        + ",app Unique ID= " + appId
+                + "  Application Name= " + appName
+                + " ,Vulnerability ID= " + vulnerabilityId
+                + " ,Vulnerability Name= " + vulnerabilityName
+                + " ,Vulnerability Reference= " + vulnerabilityReference
+                + " ,Severity= " + severity
+                + " ,Status= " + status
+                + " ,Open Date= " + openDate
+                + " ,Scanner= " + scanner
+                + " ,CWE ID= " + cweId
+                + " ,CWE Name= " + cweName
+                + " ,OWASP Top 10= " + owaspTopTen
+                + " , Path= " + path
+                + " ,Parameter= " + parameter
+                + " ,Payload= " + payload
+                + " ,Attack Surface Path= " + attackSurfacePath
+                + " ,Attack String= " + attackString
+                + " ,Attack Request= " + attackResponse
+                + " ,Attack Response= " + attackResponse
+                + " ,Scanner Details= " + scannerDetails
+                + " ,Scanner Recommendation= " + scannerRecommendation
+                + " ,Remediation Target Date= " + remediationTargetDate
+                + " ,Application Tags= " + applicationTags
+                + " ,Vulnerability Tags=" + vulnerabilityTags;
     }
 }

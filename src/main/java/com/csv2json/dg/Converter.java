@@ -2,23 +2,37 @@ package com.csv2json.dg;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.csv2json.dg.CsvMover;
+
+import java.io.File;
 
 public class Converter {
 
     public static void main(String[] args) {
 
 
+        CsvMover csvPojo = getCsvMover;
         ObjectMapper mapper = new ObjectMapper();
 
-        CsvPojo csvPojo = csvObject();
+        try {
+            mapper.writeValue(new File("result.json"), csvPojo);//Plain JSON
+            //mapper.writerWithDefaultPrettyPrinter().writeValue(new File("result.json"), carFleet);//Prettified JSON
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
+
+
+}
 
 
 
     private static CsvPojo csvObject(){
 
+
         CsvPojo csvObject = new CsvPojo();
+        String[] csv = line.split(splitBy);
 
         csvObject.setTeamName(csv[0]);
         csvObject.setAppId(csv[1]);
