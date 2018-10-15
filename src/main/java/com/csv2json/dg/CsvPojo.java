@@ -1,7 +1,5 @@
 package com.csv2json.dg;
 
-import csv.CSV;
-
 public class CsvPojo {
 
     private String teamName;

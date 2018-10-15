@@ -4,7 +4,6 @@ package com.csv2json.dg;
 import au.com.bytecode.opencsv.bean.CsvToBean;
 import au.com.bytecode.opencsv.bean.HeaderColumnNameMappingStrategy;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import csv.CSV;
 
 import java.io.*;
 
